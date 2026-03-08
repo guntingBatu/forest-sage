@@ -32,19 +32,19 @@ const HeroSection = () => {
       <img
         src={leafImg}
         alt="Organic leaf"
-        className="absolute top-[10%] left-[5%] w-32 md:w-48 rounded-5xl animate-float opacity-80 pointer-events-none"
+        className="absolute top-[10%] left-[5%] w-20 sm:w-32 md:w-48 rounded-5xl animate-float opacity-80 pointer-events-none"
         style={{ transform: `translateY(${parallax(0.05)}px)` }}
       />
       <img
         src={herbImg}
         alt="Fresh rosemary"
-        className="absolute top-[15%] right-[8%] w-28 md:w-40 rounded-5xl animate-float-delayed opacity-80 pointer-events-none"
+        className="absolute top-[15%] right-[8%] w-16 sm:w-28 md:w-40 rounded-5xl animate-float-delayed opacity-80 pointer-events-none"
         style={{ transform: `translateY(${parallax(0.03)}px)` }}
       />
       <img
         src={botanicalImg}
         alt="Dried lavender"
-        className="absolute bottom-[15%] left-[15%] w-24 md:w-36 rounded-5xl animate-float-slow opacity-70 pointer-events-none"
+        className="absolute bottom-[15%] left-[15%] w-14 sm:w-24 md:w-36 rounded-5xl animate-float-slow opacity-70 pointer-events-none"
         style={{ transform: `translateY(${parallax(-0.04)}px)` }}
       />
 
@@ -69,7 +69,7 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom descriptive text */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-16 md:mt-24 px-6 md:px-20 max-w-5xl w-full">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-16 mt-10 sm:mt-16 md:mt-24 px-4 sm:px-6 md:px-20 max-w-5xl w-full">
         <p className="font-body text-sm md:text-base text-foreground leading-relaxed">
           Hand-crafted organic botanicals sourced from the earth's finest ingredients. 
           Every product tells a story of sustainable harvesting and ancient wisdom.
