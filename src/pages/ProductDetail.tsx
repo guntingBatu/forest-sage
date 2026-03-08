@@ -87,7 +87,7 @@ const ProductDetail = () => {
                 <button
                   key={i}
                   onClick={() => setActiveImage(i)}
-                  className={`w-20 h-24 md:w-24 md:h-28 rounded-4xl overflow-hidden border-2 transition-all duration-300 ${
+                  className={`w-16 h-20 sm:w-20 sm:h-24 md:w-24 md:h-28 rounded-2xl sm:rounded-4xl overflow-hidden border-2 transition-all duration-300 ${
                     activeImage === i
                       ? "border-foreground scale-105"
                       : "border-transparent opacity-60 hover:opacity-100"
