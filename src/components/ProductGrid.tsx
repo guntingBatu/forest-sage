@@ -12,7 +12,7 @@ const ProductGrid = () => {
     <section
       ref={sectionRef}
       id="shop"
-      className="relative bg-accent rounded-t-6xl pt-20 md:pt-32 pb-20 px-6 md:px-10"
+      className="relative bg-accent rounded-t-[3rem] sm:rounded-t-6xl pt-14 sm:pt-20 md:pt-32 pb-14 sm:pb-20 px-4 sm:px-6 md:px-10"
     >
       <div className="scroll-reveal flex flex-col md:flex-row items-start md:items-end justify-between mb-16 md:mb-24">
         <h2
