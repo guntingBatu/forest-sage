@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useCallback, ReactNode } from "react";
 import { Product } from "@/data/products";
+import { toast } from "@/hooks/use-toast";
 
 export interface CartItem {
   product: Product;
@@ -46,6 +47,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       return [...prev, { product, quantity }];
     });
     setIsOpen(true);
+    toast({
+      title: `${product.name} added`,
+      description: `${quantity} × ${product.price} — now in your cart`,
+    });
   }, []);
 
   const removeItem = useCallback((productId: string) => {
