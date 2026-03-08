@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useCallback, ReactNode } from "react";
 import { Product } from "@/data/products";
+import { toast } from "@/hooks/use-toast";
 
 export interface CartItem {
   product: Product;
