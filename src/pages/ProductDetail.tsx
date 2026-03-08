@@ -12,6 +12,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === id);
+  const { addItem } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
   const [revealed, setRevealed] = useState(false);
