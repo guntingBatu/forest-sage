@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ArrowLeft, Plus, Minus } from "lucide-react";
 import { products } from "@/data/products";
+import { useCart } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NoiseOverlay from "@/components/NoiseOverlay";
@@ -11,6 +12,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => p.id === id);
+  const { addItem } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -154,7 +156,10 @@ const ProductDetail = () => {
                 </button>
               </div>
 
-              <button className="px-8 py-4 rounded-full bg-foreground text-background text-[11px] font-bold uppercase tracking-[0.3em] hover:scale-105 transition-transform duration-500 shadow-forest">
+              <button
+                onClick={() => { if (product) { addItem(product, quantity); setQuantity(1); } }}
+                className="px-8 py-4 rounded-full bg-foreground text-background text-[11px] font-bold uppercase tracking-[0.3em] hover:scale-105 transition-transform duration-500 shadow-forest"
+              >
                 Add to Cart
               </button>
             </div>
