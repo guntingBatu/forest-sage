@@ -203,6 +203,7 @@ const ProductDetail = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 
