@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ArrowLeft, Plus, Minus } from "lucide-react";
 import { products } from "@/data/products";
+import { useCart } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NoiseOverlay from "@/components/NoiseOverlay";
