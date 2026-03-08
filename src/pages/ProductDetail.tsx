@@ -5,6 +5,7 @@ import { products } from "@/data/products";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NoiseOverlay from "@/components/NoiseOverlay";
+import PageTransition from "@/components/PageTransition";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const ProductDetail = () => {
@@ -42,6 +43,7 @@ const ProductDetail = () => {
   ];
 
   return (
+    <PageTransition>
     <div className="relative">
       <NoiseOverlay />
       <Navbar />
@@ -201,6 +203,7 @@ const ProductDetail = () => {
 
       <Footer />
     </div>
+    </PageTransition>
   );
 };
 
