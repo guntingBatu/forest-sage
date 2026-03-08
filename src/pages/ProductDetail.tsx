@@ -43,6 +43,7 @@ const ProductDetail = () => {
   ];
 
   return (
+    <PageTransition>
     <div className="relative">
       <NoiseOverlay />
       <Navbar />
