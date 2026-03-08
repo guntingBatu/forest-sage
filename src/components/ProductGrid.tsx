@@ -14,15 +14,15 @@ const ProductGrid = () => {
       id="shop"
       className="relative bg-accent rounded-t-[3rem] sm:rounded-t-6xl pt-14 sm:pt-20 md:pt-32 pb-14 sm:pb-20 px-4 sm:px-6 md:px-10"
     >
-      <div className="scroll-reveal flex flex-col md:flex-row items-start md:items-end justify-between mb-16 md:mb-24">
+      <div className="scroll-reveal flex flex-col md:flex-row items-start md:items-end justify-between mb-10 sm:mb-16 md:mb-24">
         <h2
           className="font-display text-foreground leading-[0.85]"
-          style={{ fontSize: "clamp(3rem, 15vw, 15vw)", letterSpacing: "-0.03em" }}
+          style={{ fontSize: "clamp(2.5rem, 15vw, 15vw)", letterSpacing: "-0.03em" }}
         >
           SHOP
         </h2>
-        <button className="mt-6 md:mt-0 flex items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-full bg-foreground text-background hover:scale-105 transition-transform duration-500 cursor-pointer shadow-forest">
-          <ArrowRight size={28} />
+        <button className="mt-4 md:mt-0 flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 rounded-full bg-foreground text-background hover:scale-105 transition-transform duration-500 cursor-pointer shadow-forest">
+          <ArrowRight size={20} className="sm:w-7 sm:h-7" />
         </button>
       </div>
 
