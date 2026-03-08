@@ -7,7 +7,7 @@ const Footer = () => {
   const ref = useScrollReveal<HTMLElement>();
 
   return (
-    <footer ref={ref} className="bg-foreground text-secondary rounded-t-6xl pt-20 md:pt-32 pb-10 px-6 md:px-10">
+    <footer ref={ref} className="bg-foreground text-secondary rounded-t-[3rem] sm:rounded-t-6xl pt-14 sm:pt-20 md:pt-32 pb-8 sm:pb-10 px-4 sm:px-6 md:px-10">
       <div className="scroll-reveal grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 max-w-7xl mx-auto">
         {/* Newsletter - left */}
         <div className="md:col-span-6">

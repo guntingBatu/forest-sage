@@ -69,7 +69,7 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom descriptive text */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-16 md:mt-24 px-6 md:px-20 max-w-5xl w-full">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-16 mt-10 sm:mt-16 md:mt-24 px-4 sm:px-6 md:px-20 max-w-5xl w-full">
         <p className="font-body text-sm md:text-base text-foreground leading-relaxed">
           Hand-crafted organic botanicals sourced from the earth's finest ingredients. 
           Every product tells a story of sustainable harvesting and ancient wisdom.

@@ -53,9 +53,9 @@ const ProductGrid = () => {
               </button>
             </div>
             {/* Info */}
-            <Link to={`/product/${product.id}`} className="mt-4 flex items-center justify-between px-2 block">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">{product.name}</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">{product.price}</span>
+            <Link to={`/product/${product.id}`} className="mt-2 sm:mt-4 flex items-center justify-between px-1 sm:px-2 block">
+              <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-foreground">{product.name}</span>
+              <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-muted-foreground">{product.price}</span>
             </Link>
           </div>
         ))}
