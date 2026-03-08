@@ -82,7 +82,7 @@ const ProductDetail = () => {
               />
             </div>
             {/* Thumbnails */}
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               {galleryImages.map((img, i) => (
                 <button
                   key={i}
