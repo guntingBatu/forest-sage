@@ -63,7 +63,7 @@ const ProductDetail = () => {
         </div>
 
         {/* Product layout */}
-        <div className="px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 max-w-7xl mx-auto">
+        <div className="px-4 sm:px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-16 max-w-7xl mx-auto">
           {/* Left: Image gallery */}
           <div
             className="flex flex-col gap-4"
