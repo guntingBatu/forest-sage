@@ -47,6 +47,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       return [...prev, { product, quantity }];
     });
     setIsOpen(true);
+    toast({
+      title: `${product.name} added`,
+      description: `${quantity} × ${product.price} — now in your cart`,
+    });
   }, []);
 
   const removeItem = useCallback((productId: string) => {
