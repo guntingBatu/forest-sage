@@ -74,7 +74,7 @@ const ProductDetail = () => {
             }}
           >
             {/* Main image */}
-            <div className="aspect-[4/5] overflow-hidden rounded-5xl shadow-forest">
+            <div className="aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-3xl sm:rounded-5xl shadow-forest">
               <img
                 src={galleryImages[activeImage]}
                 alt={product.name}
