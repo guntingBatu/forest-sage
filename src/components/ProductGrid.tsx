@@ -34,7 +34,7 @@ const ProductGrid = () => {
             style={{ transitionDelay: `${i * 0.08}s` }}
           >
             <Link to={`/product/${product.id}`} className="block">
-              <div className="aspect-[4/5] overflow-hidden rounded-4xl">
+              <div className="aspect-[4/5] overflow-hidden rounded-2xl sm:rounded-4xl">
                 <img
                   src={product.image}
                   alt={product.name}
