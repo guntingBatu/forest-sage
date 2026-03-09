@@ -76,12 +76,12 @@ const Navbar = () => {
             >
               {navLinks.map((link) => (
                 <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+                  key={link.label}
+                  href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className="text-[11px] font-bold uppercase tracking-[0.3em] text-foreground hover:text-moss transition-colors py-2 border-b border-foreground/10 last:border-0"
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </motion.div>
