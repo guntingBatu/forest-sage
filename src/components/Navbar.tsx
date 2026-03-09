@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const navLinks = ["Shop", "Story", "Journal", "Stockists"];
+const navLinks = [
+  { label: "Shop", href: "/#shop" },
+  { label: "Story", href: "/story" },
+  { label: "Journal", href: "#journal" },
+  { label: "Stockists", href: "#stockists" },
+];
 
 const Navbar = () => {
   const { openCart, totalItems } = useCart();
