@@ -25,11 +25,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-1 px-6 py-2 rounded-full backdrop-blur-[20px] bg-[hsla(0,0%,100%,0.1)] border border-[hsla(0,0%,100%,0.15)]">
           {navLinks.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.label}
+              href={link.href}
               className="px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-foreground hover:text-moss transition-colors duration-300"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
