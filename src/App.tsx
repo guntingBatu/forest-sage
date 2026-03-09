@@ -11,6 +11,7 @@ import Story from "./pages/Story";
 import Journal from "./pages/Journal";
 import ArticleDetail from "./pages/ArticleDetail";
 import ProductDetail from "./pages/ProductDetail";
+import Stockists from "./pages/Stockists";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const AnimatedRoutes = () => {
         <Route path="/journal" element={<Journal />} />
         <Route path="/journal/:id" element={<ArticleDetail />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/stockists" element={<Stockists />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
