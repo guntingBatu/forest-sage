@@ -36,7 +36,25 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <button
+            onClick={toggle}
+            className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-cream text-forest transition-colors duration-300"
+            aria-label="Toggle dark mode"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={dark ? "moon" : "sun"}
+                initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center justify-center"
+              >
+                {dark ? <Sun size={14} /> : <Moon size={14} />}
+              </motion.span>
+            </AnimatePresence>
+          </button>
           <button
             onClick={openCart}
             className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-full bg-cream text-forest"
