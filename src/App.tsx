@@ -8,6 +8,8 @@ import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import Index from "./pages/Index";
 import Story from "./pages/Story";
+import Journal from "./pages/Journal";
+import ArticleDetail from "./pages/ArticleDetail";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
