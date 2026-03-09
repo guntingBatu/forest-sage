@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import Index from "./pages/Index";
+import Story from "./pages/Story";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
