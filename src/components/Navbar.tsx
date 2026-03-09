@@ -14,6 +14,7 @@ const navLinks = [
 
 const Navbar = () => {
   const { openCart, totalItems } = useCart();
+  const { dark, toggle } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
