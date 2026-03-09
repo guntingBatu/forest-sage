@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const navLinks = ["Shop", "Story", "Journal", "Stockists"];
+const navLinks = [
+  { label: "Shop", href: "/#shop" },
+  { label: "Story", href: "/story" },
+  { label: "Journal", href: "#journal" },
+  { label: "Stockists", href: "#stockists" },
+];
 
 const Navbar = () => {
   const { openCart, totalItems } = useCart();
@@ -20,11 +25,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-1 px-6 py-2 rounded-full backdrop-blur-[20px] bg-[hsla(0,0%,100%,0.1)] border border-[hsla(0,0%,100%,0.15)]">
           {navLinks.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.label}
+              href={link.href}
               className="px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-foreground hover:text-moss transition-colors duration-300"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
@@ -71,12 +76,12 @@ const Navbar = () => {
             >
               {navLinks.map((link) => (
                 <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+                  key={link.label}
+                  href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className="text-[11px] font-bold uppercase tracking-[0.3em] text-foreground hover:text-moss transition-colors py-2 border-b border-foreground/10 last:border-0"
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </motion.div>
