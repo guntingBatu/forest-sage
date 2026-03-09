@@ -11,6 +11,7 @@ import Story from "./pages/Story";
 import Journal from "./pages/Journal";
 import ArticleDetail from "./pages/ArticleDetail";
 import ProductDetail from "./pages/ProductDetail";
+import Stockists from "./pages/Stockists";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
