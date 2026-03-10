@@ -23,12 +23,12 @@ const Journal = () => {
           <section className="pt-28 sm:pt-32 md:pt-40 pb-10 sm:pb-14 px-4 sm:px-6 md:px-10 bg-background">
             <div className="max-w-6xl mx-auto">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-muted-foreground mb-4 block">
-                The Journal
+                Jurnal
               </span>
               <h1 className="font-display text-4xl sm:text-5xl md:text-7xl text-foreground leading-[0.9]">
-                STORIES FROM
+                CERITA DARI
                 <br />
-                THE EARTH
+                BUMI NUSANTARA
               </h1>
             </div>
           </section>
@@ -67,8 +67,11 @@ const Journal = () => {
                     {featured.excerpt}
                   </p>
                   <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground group-hover:text-moss transition-colors duration-300">
-                    Read Article
-                    <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    Baca Artikel
+                    <ArrowRight
+                      size={14}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
                   </span>
                 </div>
               </div>

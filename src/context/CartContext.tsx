@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  ReactNode,
+} from "react";
 import { Product } from "@/data/products";
 
 export interface CartItem {
@@ -26,7 +32,7 @@ export const useCart = () => {
   return ctx;
 };
 
-const parsePrice = (price: string) => parseFloat(price.replace("$", ""));
+const parsePrice = (price: string) => parseInt(price.replace(/\./g, ""), 10);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [items, setItems] = useState<CartItem[]>([]);
@@ -40,7 +46,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       const existing = prev.find((i) => i.product.id === product.id);
       if (existing) {
         return prev.map((i) =>
-          i.product.id === product.id ? { ...i, quantity: i.quantity + quantity } : i
+          i.product.id === product.id
+            ? { ...i, quantity: i.quantity + quantity }
+            : i,
         );
       }
       return [...prev, { product, quantity }];
@@ -58,16 +66,29 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       return;
     }
     setItems((prev) =>
-      prev.map((i) => (i.product.id === productId ? { ...i, quantity } : i))
+      prev.map((i) => (i.product.id === productId ? { ...i, quantity } : i)),
     );
   }, []);
 
   const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
-  const totalPrice = items.reduce((sum, i) => sum + parsePrice(i.product.price) * i.quantity, 0);
+  const totalPrice = items.reduce(
+    (sum, i) => sum + parsePrice(i.product.price) * i.quantity,
+    0,
+  );
 
   return (
     <CartContext.Provider
-      value={{ items, isOpen, openCart, closeCart, addItem, removeItem, updateQuantity, totalItems, totalPrice }}
+      value={{
+        items,
+        isOpen,
+        openCart,
+        closeCart,
+        addItem,
+        removeItem,
+        updateQuantity,
+        totalItems,
+        totalPrice,
+      }}
     >
       {children}
     </CartContext.Provider>

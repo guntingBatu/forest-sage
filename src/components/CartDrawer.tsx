@@ -4,7 +4,15 @@ import { useCart } from "@/context/CartContext";
 import { Link } from "react-router-dom";
 
 const CartDrawer = () => {
-  const { items, isOpen, closeCart, updateQuantity, removeItem, totalItems, totalPrice } = useCart();
+  const {
+    items,
+    isOpen,
+    closeCart,
+    updateQuantity,
+    removeItem,
+    totalItems,
+    totalPrice,
+  } = useCart();
 
   return (
     <AnimatePresence>
@@ -30,9 +38,12 @@ const CartDrawer = () => {
           >
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-foreground/10">
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-foreground">
-                Cart ({totalItems})
-              </span>
+              <div className="flex items-center gap-3">
+                <ShoppingBag size={18} className="text-foreground" />
+                <span className="font-body font-bold text-[11px] uppercase tracking-editorial-wide text-foreground">
+                  cart ({totalItems})
+                </span>
+              </div>
               <button
                 onClick={closeCart}
                 className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-foreground/5 transition-colors text-foreground"
@@ -47,13 +58,13 @@ const CartDrawer = () => {
                 <div className="flex flex-col items-center justify-center h-full gap-4 text-center">
                   <ShoppingBag size={40} className="text-foreground/20" />
                   <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                    Your cart is empty
+                    Keranjang Anda kosong
                   </p>
                   <button
                     onClick={closeCart}
                     className="mt-2 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground underline"
                   >
-                    Continue shopping
+                    Lanjutkan belanja
                   </button>
                 </div>
               ) : (
@@ -65,7 +76,12 @@ const CartDrawer = () => {
                         layout
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -30, height: 0, marginBottom: 0 }}
+                        exit={{
+                          opacity: 0,
+                          x: -30,
+                          height: 0,
+                          marginBottom: 0,
+                        }}
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                         className="flex gap-4"
                       >
@@ -101,7 +117,12 @@ const CartDrawer = () => {
                             {/* Quantity */}
                             <div className="flex items-center border border-foreground/15 rounded-full overflow-hidden">
                               <button
-                                onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
+                                onClick={() =>
+                                  updateQuantity(
+                                    item.product.id,
+                                    item.quantity - 1,
+                                  )
+                                }
                                 className="w-7 h-7 flex items-center justify-center text-foreground hover:bg-foreground/5 transition-colors"
                               >
                                 <Minus size={10} />
@@ -110,7 +131,12 @@ const CartDrawer = () => {
                                 {item.quantity}
                               </span>
                               <button
-                                onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
+                                onClick={() =>
+                                  updateQuantity(
+                                    item.product.id,
+                                    item.quantity + 1,
+                                  )
+                                }
                                 className="w-7 h-7 flex items-center justify-center text-foreground hover:bg-foreground/5 transition-colors"
                               >
                                 <Plus size={10} />
@@ -142,10 +168,10 @@ const CartDrawer = () => {
               <div className="px-6 py-6 border-t border-foreground/10">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">
-                    Total
+                    Total ({totalItems} item)
                   </span>
                   <span className="font-display text-2xl text-foreground">
-                    ${totalPrice.toFixed(2)}
+                    Rp {totalPrice.toLocaleString("id-ID")}
                   </span>
                 </div>
                 <button className="w-full py-4 rounded-full bg-foreground text-background text-[11px] font-bold uppercase tracking-[0.3em] hover:scale-[1.02] transition-transform duration-500 shadow-forest">
@@ -155,7 +181,7 @@ const CartDrawer = () => {
                   onClick={closeCart}
                   className="w-full mt-3 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/60 hover:text-foreground transition-colors text-center"
                 >
-                  Continue Shopping
+                  Lanjutkan belanja
                 </button>
               </div>
             )}

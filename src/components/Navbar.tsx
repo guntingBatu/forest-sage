@@ -6,10 +6,10 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
-  { label: "Shop", href: "/#shop" },
+  { label: "Shop", href: "/" },
   { label: "Story", href: "/story" },
+  { label: "Stockist", href: "/stockists" },
   { label: "Journal", href: "/journal" },
-  { label: "Stockists", href: "/stockists" },
 ];
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 md:py-4">
         <Link to="/" className="font-display text-lg md:text-xl text-foreground tracking-tight">
-          — TERRA
+          — WARISAN
         </Link>
 
         <div className="hidden md:flex items-center gap-1 px-6 py-2 rounded-full backdrop-blur-[20px] bg-[hsla(0,0%,100%,0.1)] border border-[hsla(0,0%,100%,0.15)]">
